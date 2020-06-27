@@ -16,7 +16,7 @@ public class Main {
 //        System.out.println("Abbreviation = " + abbreviationForSrtringsVerTwo(s));
     }
 
-    // first task
+    // solution on the interview first task
     public int minFromThreeNums(int a, int b, int c) {
         int minValue = a;
 
@@ -33,6 +33,7 @@ public class Main {
         return minValue;
     }
 
+    // 2-nd version
     public int minFromThreeNumsVerTwo(int a, int b, int c) {
         int[] mas = new int[]{a, b, c};
         int minValue = mas[0];
@@ -44,7 +45,9 @@ public class Main {
         return minValue;
     }
 
-    // second task
+    //========================================== second task =================================================
+
+    // 1-st version
     public String abbreviationForSrtrings(String s) {
         String[] splittedStrings = s.split(" ");
         String finishString = "";
@@ -54,6 +57,7 @@ public class Main {
         return finishString.toUpperCase();
     }
 
+    // 2-nd version via stream api
     public String abbreviationForSrtringsVerTwo(String s) {
         return Arrays.stream(s.split(" "))
                 .map(i -> i.charAt(0))
